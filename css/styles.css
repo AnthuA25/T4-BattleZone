@@ -510,3 +510,16 @@ footer p {
   border: none;
   font-size: 1rem;
 }
+
+.btn-registration{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  background: #44cbda;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
