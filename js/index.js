@@ -53,4 +53,50 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
     }
   });
+  gameSelect.addEventListener("change", () => {
+    const selectedGame = gameSelect.options[gameSelect.selectedIndex];
+    const price = selectedGame.dataset.price;
+    const paymentLabel = document.querySelector('label[for="payment"]');
+    paymentLabel.textContent = `Pago en S/ (${price})`;
+  });
+
+  const validateForm = () => {
+    let isValid = true;
+
+    const selectedGame = gameSelect.options[gameSelect.selectedIndex];
+    const gamePrice = parseFloat(selectedGame.dataset.price);
+
+    if (!nameInput.value) {
+      isValid = false;
+      alert(errorMessages.name);
+    } else if (!emailInput.value || !emailInput.value.includes("@")) {
+      isValid = false;
+      alert(errorMessages.email);
+    } else if (!birthdayInput.value || !isAgeValid(birthdayInput.value)) {
+      isValid = false;
+      alert(errorMessages.birthday);
+    } else if (!gameSelect.value) {
+      isValid = false;
+      alert(errorMessages.game);
+    } else if (parseFloat(paymentInput.value) < gamePrice) {
+      isValid = false;
+      const missingAmount = gamePrice - parseFloat(paymentInput.value);
+      alert(`El pago es insuficiente. Te falta S/ ${missingAmount.toFixed(2)}`);
+    } else if (parseFloat(paymentInput.value) > gamePrice) {
+      isValid = false;
+      const changeAmount = parseFloat(paymentInput.value) - gamePrice;
+      alert(`Has pagado de más. Tu vuelto es S/ ${changeAmount.toFixed(2)}`);
+    }
+
+    return isValid;
+  };
+  
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (validateForm()) {
+      alert("Inscripción completada con éxito");
+      form.reset();
+    }
+  });
 });
