@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscipción</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/ff37227b15.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html" class="logo"> BattleZone </a>
+
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="../index.html">Nosotros</a></li>
+          <li><a href="./torneos.html">Torneos</a></li>
+          <li><a href="./inscripcion.html">Inscripción</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container-registration">
+      <h2 class="title-registration">Inscripción</h2>
+      <section class="registration">
+        <div class="conteiner_inscription">
+          <label for="name">Nombres y Apellidos</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ej: Roberto Sanchez"
+            required
+          />
+          <label for="email">Correo Electrónico</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ej: roberto90@gmail.com"
+            required
+          />
+          <label for="birthday">Fecha de Nacimiento</label>
+          <input type="date" id="birthday" name="birthday" required />
+          <label for="game">Torneo</label>
+          <select id="game" name="game" required>
+            <option value="">Selecciona un juego</option>
+            <option value="valorant">Valorant</option>
+            <option value="lol">League of Legends</option>
+            <option value="csgo">CS:GO</option>
+            <option value="fortnite">Fortnite</option>
+            <option value="Mortal Kombat">Mortal Kombat 1</option>
+            <option value="COD:Warzone">COD:Warzone</option>
+            <option value="Dota 2">Dota 2</option>
+            <option value="Overwatch 2">Overwatch 2</option>
+          </select>
+          <label for="payment">Pago en S/</label>
+          <input type="number" name="payment" id="payment" />
+        </div>
+      </section>
+      <section class="pay-card"></section>
+    </main>
+    <footer>
+      <p>© 2025 BattleZone - Todos los derechos reservados</p>
+    </footer>
+  </body>
 </html>
