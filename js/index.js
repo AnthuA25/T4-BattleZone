@@ -22,6 +22,35 @@ document.addEventListener("DOMContentLoaded", function () {
     return age > 14 || (age === 14 && m >= 0);
   };
 
-  
-
+  const gameOption = gameSelect.querySelectorAll("option");
+  gameOption.forEach((option) => {
+    switch (option.value) {
+      case "valorant":
+        option.dataset.price = "50";
+        break;
+      case "lol":
+        option.dataset.price = "30";
+        break;
+      case "csgo":
+        option.dataset.price = "40";
+        break;
+      case "fortnite":
+        option.dataset.price = "45";
+        break;
+      case "Mortal Kombat":
+        option.dataset.price = "60";
+        break;
+      case "COD:Warzone":
+        option.dataset.price = "55";
+        break;
+      case "Dota 2":
+        option.dataset.price = "35";
+        break;
+      case "Overwatch 2":
+        option.dataset.price = "50";
+        break;
+      default:
+        break;
+    }
+  });
 });
