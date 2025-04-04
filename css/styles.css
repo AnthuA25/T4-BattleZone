@@ -278,3 +278,234 @@ footer p {
   font-weight: 600;
   line-height: normal;
 }
+
+/* torneos.html */
+.title-tournaments {
+  color: #ac9cea;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.tournaments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.card-tournaments {
+  /* border: 2px solid red; */
+  width: 300px;
+}
+.card-tournaments img {
+  width: 295px;
+  height: 185px;
+}
+.card-info {
+  border-radius: 0px 0px 10px 10px;
+  background: linear-gradient(
+    2deg,
+    #49172f 1.47%,
+    rgba(175, 55, 113, 0) 98.53%
+  );
+}
+.card-info2 {
+  border-radius: 0px 0px 10px 10px;
+  background: linear-gradient(0deg, #293e52 0%, rgba(45, 112, 174, 0) 100%);
+}
+
+.card-info3 {
+  border-radius: 0px 0px 10px 10px;
+  background: linear-gradient(0deg, #152f56 0%, rgba(45, 101, 185, 0) 100%);
+}
+
+.card-info4 {
+  border-radius: 0px 0px 10px 10px;
+  background: linear-gradient(0deg, #392048 0%, rgba(130, 54, 174, 0) 100%);
+}
+.title-card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: start;
+  gap: 10px;
+  align-self: stretch;
+}
+.title-card h5 {
+  color: #44cbda;
+}
+
+.title-card h3 {
+  font-size: 1rem;
+  color: white;
+}
+.option-card {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.option {
+  color: white;
+  display: flex;
+  gap: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  /* opacity: 0.5; */
+  background: rgba(255, 255, 255, 0.21);
+  backdrop-filter: blur(5px);
+}
+
+.host {
+  padding: 10px;
+}
+
+.host h6 {
+  color: white;
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.host p {
+  padding: 10px 10px 0 0;
+  color: #85b4b9;
+  font-size: 0.8rem;
+  font-style: normal;
+}
+
+.card-pie {
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0px 0px 10px 10px;
+  background: rgba(255, 255, 255, 0.21);
+  backdrop-filter: blur(5px);
+  height: 40px;
+}
+
+/* registration page */
+
+.container-registration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title-registration {
+  color: #ac9cea;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.registration {
+  position: relative;
+  /* background: #131027; */
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+  width: 50%;
+  /* height: 100%; */
+}
+
+.registration::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(90deg, #4a66c7, #392048);
+  border-radius: inherit;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.conteiner_inscription {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pay-card {
+  width: 50%;
+}
+
+.conteiner_inscription label {
+  text-align: start;
+}
+
+.conteiner_inscription input,
+.conteiner_inscription select,
+.conteiner_inscription textarea {
+  padding: 10px;
+  background: none;
+  border: none;
+  color: white;
+  border-bottom: 2px solid #392048;
+  background: #131027;
+}
+.conteiner_inscription input::placeholder {
+  color: rgba(255, 255, 255, 0.39);
+}
+.conteiner_inscription .flatpickr-input::placeholder {
+  color: rgba(255, 255, 255, 0.39);
+}
+.conteiner_inscription input:focus,
+.conteiner_inscription select:focus,
+.conteiner_inscription textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #a678ff;
+}
+
+.conteiner_inscription select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' class='bi bi-caret-down-fill' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.07 2.3 4 3.204 4h9.592c.904 0 1.319 1.07.753 1.658L8.753 11.14a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px; /* espacio para la flecha */
+}
+.conteiner_inscription input[type="number"] {
+  padding: 10px;
+  background: #131027;
+  color: white;
+  border: none;
+  border-bottom: 2px solid #392048;
+  font-size: 1rem;
+  font-family: inherit;
+  appearance: textfield;
+}
+
+.conteiner_inscription input[type="number"]::-webkit-outer-spin-button,
+.conteiner_inscription input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn-contact {
+  margin: 0 auto;
+  width: 400px;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  background: #44cbda;
+  border: none;
+  font-size: 1rem;
+}
