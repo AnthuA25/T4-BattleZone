@@ -27,7 +27,7 @@
     <main class="container-registration">
       <h2 class="title-registration">Inscripción</h2>
       <section class="registration">
-        <div class="conteiner_inscription">
+        <form class="conteiner_inscription">
           <label for="name">Nombres y Apellidos</label>
           <input
             type="text"
@@ -47,6 +47,7 @@
           <label for="birthday">Fecha de Nacimiento</label>
           <input type="date" id="birthday" name="birthday" required />
           <label for="game">Torneo</label>
+          
           <select id="game" name="game" required>
             <option value="">Selecciona un juego</option>
             <option value="valorant">Valorant</option>
@@ -60,12 +61,14 @@
           </select>
           <label for="payment">Pago en S/</label>
           <input type="number" name="payment" id="payment" />
-        </div>
+          <button class="btn-registration" type="submit">Inscribirse</button>
+        </form>
       </section>
       <section class="pay-card"></section>
     </main>
     <footer>
       <p>© 2025 BattleZone - Todos los derechos reservados</p>
     </footer>
+    <script src="../js/index.js" defer></script>
   </body>
 </html>
