@@ -264,7 +264,7 @@ header {
 }
 
 footer {
-  margin-top:50px;
+  margin-top: 50px;
   background: #100c1e;
   padding: 20px;
   color: #fff;
@@ -397,7 +397,7 @@ footer p {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 .title-registration {
@@ -511,7 +511,7 @@ footer p {
   font-size: 1rem;
 }
 
-.btn-registration{
+.btn-registration {
   margin: 0 auto;
   width: 100%;
   max-width: 400px;
@@ -533,7 +533,7 @@ footer p {
   border: 2px solid red;
 }
 
-.start-game{
+.start-game {
   position: relative;
   /* background: #131027; */
   border-radius: 8px;
@@ -542,6 +542,13 @@ footer p {
   color: white;
   /* margin-bottom: 50px; */
   width: 50%;
+  /* max-width: 1000px; */
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   /* height: 100%; */
 }
 
@@ -556,4 +563,56 @@ footer p {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
+}
+
+.ball {
+  width: 30px;
+  height: 30px;
+  background-color: #392048;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  animation: bounce 5s infinite alternate;
+}
+
+.hidden {
+  display: none;
+}
+
+.trash {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 40px;
+  color: #00bfff;
+}
+
+#message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#startBtn {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#timer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background:#131027;
+  padding: 8px 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }

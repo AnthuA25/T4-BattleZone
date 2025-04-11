@@ -24,14 +24,16 @@
           </ul>
         </nav>
       </header>
-      <main class="section-game">
-        <section class="start-game">
-            <button>Empezar Juego</button>
-            <div id="trash" class="trash">
+      <main class="section-game"> 
+        <section class="start-game" id="game-area">
+            <button id="startBtn">Empezar Juego</button>
+            <div id="trash" class="trash hidden">
                 <i class="fas fa-trash-alt"></i>
             </div>
+            <div id="timer" class="hidden"></div>
             <div id="message"></div>
         </section>
       </main>
+      <script src="../js/juego.js" defer></script>
 </body>
 </html>
