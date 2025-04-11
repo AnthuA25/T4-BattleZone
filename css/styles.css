@@ -524,4 +524,36 @@ footer p {
   cursor: pointer;
 }
 
+.section-game {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+}
 
+.start-game{
+  position: relative;
+  /* background: #131027; */
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  /* margin-bottom: 50px; */
+  width: 50%;
+  /* height: 100%; */
+}
+
+.start-game::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(90deg, #4a66c7, #392048);
+  border-radius: inherit;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
